@@ -7,7 +7,7 @@ function MoviePages() {
         <>
             <header id="movie">
                 <div className="page-container">
-                    <img src="matrix.jpg" alt="" />
+                    <img src="/imgs/matrix.jpg" alt="" />
                 </div>
                 <h1>titolo film</h1>
                 <h3>autore</h3>
