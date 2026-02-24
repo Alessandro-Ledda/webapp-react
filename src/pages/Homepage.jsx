@@ -7,7 +7,7 @@ function HomePage() {
             <h2>Movies List</h2>
 
             <div className="home-container">
-                <div className="content home">
+                <div className="content-home">
                     <CardMovie />
                     <CardMovie />
                     <CardMovie />
