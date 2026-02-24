@@ -12,7 +12,7 @@ const endPoint = "http://localhost:3000/api/movies/";
 function HomePage() {
 
     // impostiamo la var di stato per gestione lista film
-    const { movies, setMovies } = useState([]);
+    const [movies, setMovies] = useState([]);
 
     // funzione che gestisce la chiamata axios alla rott aindex del BE
     function fetchMovie() {
