@@ -25,12 +25,12 @@ function MoviePages() {
 
     // funzione per gestione chiamata alla rotta di show di BE
     function fetchMovie() {
-        axios.get(endPoint)
+        axios.get(endPoint + id)
             .then(res => { setMovie(res.data); })
             .catch(err => {
                 console.log(err);
                 // controllo per rotte inesistenti
-                if (err.status = 404) redirect('/404')
+                if (err.status === 404) redirect('/404')
             })
             .finally()
     }

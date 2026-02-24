@@ -13,7 +13,7 @@ function CardMovie(props) {
                         <h5>{title}</h5>
                         <address><i>{director}</i></address>
                         <p>{abstract}</p>
-                        <Link to={`movies/${id}`} className="btn">torna ai film</Link>
+                        <Link to={`movies/${id}`} className="btn">dettaglio film</Link>
                     </div>
                 </div>
             </div>
