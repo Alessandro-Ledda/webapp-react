@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import CardMovie from "../components/CardMovie";
 
 // salviamo in una costante il nostri api
-const endPoint = "http://localhost:3000/api/movies/";
+const endPoint = "http://localhost:3000/api/movies";
 
 function HomePage() {
 
