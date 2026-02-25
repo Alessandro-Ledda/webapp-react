@@ -9,6 +9,9 @@ import { useState, useEffect } from "react";
 // import card delle recensioni
 import CardReview from "../components/CardReview";
 
+// import componente per form review
+import ReviewForm from "../components/ReviewForm";
+
 // salvo la nostra api in var
 const endPoint = "http://localhost:3000/api/movies/";
 
@@ -62,6 +65,9 @@ function MoviePages() {
                 </header>
                 {/* richaimo funzione di rendering */}
                 {renderReviews()}
+            </section>
+            <section>
+                <ReviewForm movie_id={movie.id} reloadReviews={fetchMovie} />
             </section>
             <footer className="review-footer">
                 <Link className="btn" to="/">Ritorna alla Home</Link>

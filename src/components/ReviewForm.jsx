@@ -11,7 +11,7 @@ function ReviewForm(props) {
     const { movie_id, reloadReviews } = props
 
     // creiamo la stringa di ref all'endpoint del be
-    const endPoint = "`http://localhost:3000/api/movies/${movie_id}/reviews`";
+    const endPoint = `http://localhost:3000/api/movies/${movie_id}/reviews`;
 
     // creao oggetto per valori di default form
     const initialFormData = {
@@ -21,7 +21,7 @@ function ReviewForm(props) {
     };
 
     // var di stato per gestione oggetto dei valoru di input form
-    const { formData, setFormData } = useState(initialFormData)
+    const [formData, setFormData] = useState(initialFormData)
 
     // funzione di gestione dei dati del form 
     function setFieldValue(event) {
