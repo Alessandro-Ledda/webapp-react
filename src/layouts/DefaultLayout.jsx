@@ -6,7 +6,7 @@ import MainHeader from "../components/MainHeader"
 import { useGlobal } from "../GlobalContext";
 
 // import del loader
-import Loader from "../components/Louder";
+import Loader from "../components/Loader";
 
 function DefaultLayout() {
 

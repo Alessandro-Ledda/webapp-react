@@ -12,10 +12,16 @@ import CardReview from "../components/CardReview";
 // import componente per form review
 import ReviewForm from "../components/ReviewForm";
 
+// import hook custom del contesto globale
+import { useGlobal } from "../GlobalContext";
+
 // salvo la nostra api in var
 const endPoint = "http://localhost:3000/api/movies/";
 
 function MoviePages() {
+
+    // attivo l'utilizzo del/dei valore/i messi a disposizione del contesto globale
+    const { setIsLoading } = useGlobal();
 
     // recuperiamo l'id del film di ref dall'url
     const { id } = useParams();
@@ -28,6 +34,10 @@ function MoviePages() {
 
     // funzione per gestione chiamata alla rotta di show di BE
     function fetchMovie() {
+        // parte la chiamata cambio var di stato context di conseguenza
+        setIsLoading(true);
+
+        // chiamata 
         axios.get(endPoint + id)
             .then(res => { setMovie(res.data); })
             .catch(err => {
@@ -35,7 +45,7 @@ function MoviePages() {
                 // controllo per rotte inesistenti
                 if (err.status === 404) redirect('/404')
             })
-            .finally()
+            .finally(setIsLoading(false))
     }
 
     // richiamo useEffect per controllo su effetti colaterali
