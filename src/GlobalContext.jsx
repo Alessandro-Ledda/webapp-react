@@ -18,6 +18,7 @@ function GlobalProvider({ children }) {
                 setIsLoading
             }}
         >
+            {children}
         </GlobalContext.Provider>
     );
 }
