@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* reset link */
+a {
+    text-decoration: none;
+}
+
 /* style home page */
 
 .home-container {
@@ -17,18 +22,34 @@
     flex-wrap: wrap;
     gap: 30px;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 /* style card movie */
 
 .card-movie {
-    height: 300px;
-    width: 200px;
+    height: 400px;
+    width: 300px;
     border: 1px solid grey;
+    text-align: center;
 }
 
 .img-card {
     display: inline-block;
     height: 200px;
     width: auto;
+    margin-top: 20px;
+}
+
+.img-card,
+h5,
+address,
+p {
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 7px 10px;
+    background-color: mediumblue;
+    color: white;
 }
